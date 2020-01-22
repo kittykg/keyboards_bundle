@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.keyboardplay">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/future_keyboards"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <service
+                android:name=".ReduceKeysKeyboard"
+                android:label="@string/combo_board"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+
+            <meta-data
+                    android:name="android.view.im"
+                    android:resource="@xml/method"/>
+
+        </service>
+
+        <service
+                android:name=".FutureKeyboard"
+                android:label="@string/tilt_keyboard"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+
+            <meta-data
+                    android:name="android.view.im"
+                    android:resource="@xml/method"/>
+
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Future Keyboards</string>
+    <string name="future_keyboards">Future Keyboards</string>
+    <string name="combo_board">ComboBoard</string>
+    <string name="tilt_keyboard">TiltBoard</string>
+</resources>
